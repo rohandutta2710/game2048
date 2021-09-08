@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+body{
+  overscroll-behavior-y:contain; /*used to disable refresh   on swipe down in phones*/
+}
+.main-box{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.inner-box{
+  padding: 5px;
+  width: max-content;
+  height: max-content;
+  display: grid;
+  grid-template-rows: repeat(4,1fr);
+  grid-template-columns:repeat(4,1fr) ;
+  background-color: #baad9f;
+  position: relative;
+}
+.inner-box > div{
+  width: 100px;  
+  height: 105px;
+  margin: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius:5px;
+  overflow: hidden;
+}
+.inner-box > div > button{
+  background-color: transparent;
+  border: none;
+  font-size: 220%;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  padding: 0px;
+}
+.ref-animation{
+  animation: animates 0.000s linear ;
+}
+@keyframes animates {
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+.game-heading {
+  display: flex;
+  align-items: center;
+}
+.game-heading > div{
+  width: 50%;
+}
+.game-heading > div > h1{
+  color: #776E65;
+  font-size: 70px;
+  margin-bottom: 0px;
+}
+.outer-box{
+  position: relative;
+}
+.gaming-box >p {
+  color: #776E65;
+  font-size: 20px;
+  margin-bottom:20px;
+  margin-top: 0px;
+}
+.Score{
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+.score h3,h4{
+  margin:0px;
+  font-size: 25px;
+}
+.Score h5{
+  position: absolute;
+  z-index: 20;
+  top: 20px;
+  left: 20px;
+  color: #776E65;
+  font-size: 25px;
+  font-weight: bolder;
+  transition: transform 0.5s;
+}
+.add-translate{
+  transform: translateY(-48px);
+}
+.add-timing{
+  transform: translateY(0px);
+  transition:transform 0.000001s !important;
+}
+.Score > div{
+  width: max-content;
+  padding: 2px 10px 5px 10px;
+  border-radius: 5px;
+  background-color: #aba49c;
+  color: rgb(251, 251, 251);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.new-game{
+  margin-top: 15px;
+}
+.new-game > button{
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #f9f6f2;
+  background-color: #776E65;
+  padding: 9px 0px;
+  position: relative;
+}
+
+/* Game Finish  */
+.game-finish{
+  width: 100%;
+  height: 70%;
+  top: 20%;
+  position: absolute;
+  z-index: 1000;
+}
+.gameFinish-inner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  background:#c0bbb5;
+  color: #776E65;
+  font-family: 'Russo One', sans-serif;
+}
+
+@media only screen and (max-width:500px){
+    .outer-box{
+      width:400px;
+    }
+    .inner-box > div{
+      width: 85px;  
+      height: 90px;
+      margin: 6px;
+    }
+    .inner-box > div > button{
+      font-size: 190%;
+    }
+    .Score h5{
+      left: 13px !important;
+    }
+    .game-finish{
+      height: 67.8%;
+      top: 21.2%;
+    }
+}
+@media only screen and (max-width:401px){
+  .outer-box{
+    width:330px;
+  }
+  .inner-box > div{
+    width: 68px;  
+    height: 71px;
+    margin: 6px;
+  }
+  .game-heading > div > h1{
+    font-size: 55px;
+  }
+  .gaming-box >p {
+    font-size: 18px;
+    margin-top: 5px;
+  }
+  .score h3,h4{
+    font-size: 20px;
+  }
+  .inner-box > div > button{
+    font-size: 155%;
+  }
+  .game-finish{
+    height: 65%;
+    top: 22%;
+  }
+}
+@media only screen and (max-width:333px){
+  .outer-box{
+    width:280px;
+  }
+  .inner-box > div{
+    width: 55.5px;  
+    height: 60px;
+    margin: 6px;
+  }
+  .game-heading > div > h1{
+    font-size: 50px;
+  }
+  .gaming-box >p {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  .score h3,h4{
+    font-size: 18px;
+  }
+  .inner-box > div > button{
+    font-size: 130%;
+  }
+  .game-finish{
+    height: 62.8%;
+    top: 23%;
+  }
+}
+
