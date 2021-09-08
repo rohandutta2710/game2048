@@ -71,7 +71,7 @@ function KeysCases(props) {
                         if (virtualArray[j][i] === virtualArray[k][i]) {
                             virtualArray[j][i] = virtualArray[j][i] + virtualArray[k][i];
                             addingScore = addingScore + virtualArray[j][i];
-                            score = score + virtualArray[i][j];
+                            score = score + virtualArray[j][i];
                             virtualArray[k][i] = 0;
                             break;
                         }
